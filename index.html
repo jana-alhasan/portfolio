@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jana Alhasan — Frontend Developer</title>
-<meta name="description" content="Jana Alhasan — Frontend Developer working in React.js, based in Nablus, Palestine. IEEE published researcher, open to remote work.">
+<title>Jana Alhasan — Junior Frontend Developer</title>
+<meta name="description" content="Jana Alhasan — React-focused Junior Frontend Developer with professional UI implementation experience and public React project evidence.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -13,8 +13,8 @@
 <body>
 
 <header class="site-head">
-  <a class="mark" href="#top">JA</a>
-  <nav class="site-nav">
+  <a class="mark" href="#top" aria-label="Jana Alhasan home">JA</a>
+  <nav class="site-nav" aria-label="Portfolio navigation">
     <a href="#work">Work</a>
     <a href="#experience">Experience</a>
     <a href="#research">Research</a>
@@ -23,46 +23,47 @@
 </header>
 
 <main id="top">
-
   <section class="hero">
-    <p class="hero-eyebrow">Frontend Developer · Nablus, Palestine</p>
+    <p class="hero-eyebrow">Junior Frontend Developer · React-focused</p>
     <h1>Jana Alhasan</h1>
     <p class="hero-lede">
-      I build interfaces with React — and once spent a research paper figuring out
-      how to tag them correctly. Currently looking for a remote frontend role
-      in Europe or the Gulf.
+      I build responsive web interfaces with React and JavaScript, with hands-on
+      professional experience implementing Arabic RTL UI from Figma and public
+      projects that demonstrate APIs, state management, authentication, routing,
+      forms, reusable logic, and local persistence.
     </p>
     <div class="hero-links">
       <a href="mailto:jannahasan@hotmail.com">Email</a>
-      <a href="https://www.linkedin.com/in/jana-hasan/" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://github.com/jana-alhasan" target="_blank" rel="noopener">GitHub</a>
-      <a href="./Jana_Alhasan_CV.pdf">Résumé</a>
+      <a href="https://www.linkedin.com/in/jana-hasan/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/jana-alhasan" target="_blank" rel="noopener noreferrer">GitHub</a>
     </div>
   </section>
 
-  <section class="skills" aria-label="Skills">
+  <section class="skills" aria-label="Verified frontend skills">
     <div class="skills-row">
-      <span class="skills-label">Core</span>
+      <span class="skills-label">Frontend</span>
       <ul class="tag-list">
-        <li>react.js</li>
+        <li>react</li>
         <li>javascript</li>
         <li>html5</li>
         <li>css3</li>
+        <li>react-router</li>
         <li>redux-toolkit</li>
-        <li>react-native</li>
-        <li>rest-apis</li>
-        <li>git</li>
+        <li>context-api</li>
+        <li>mui</li>
       </ul>
     </div>
     <div class="skills-row">
-      <span class="skills-label">Also working with</span>
+      <span class="skills-label">Implementation</span>
       <ul class="tag-list">
-        <li>sql</li>
-        <li>python</li>
-        <li>firebase</li>
-        <li>security-fundamentals</li>
-        <li>c++</li>
-        <li>java</li>
+        <li>rest-apis</li>
+        <li>axios / fetch</li>
+        <li>firebase-auth</li>
+        <li>localstorage</li>
+        <li>react-hook-form</li>
+        <li>yup</li>
+        <li>responsive-ui</li>
+        <li>git / github</li>
       </ul>
     </div>
   </section>
@@ -74,15 +75,37 @@
       <div class="project-head">
         <h3>Entertainment WebApp</h3>
         <div class="project-links">
-          <a href="https://github.com/jana-alhasan/entertainment-WebApp" target="_blank" rel="noopener">Source</a>
-          <a href="https://janahasa.github.io/entertainment-WebApp/" target="_blank" rel="noopener">Live</a>
+          <a href="https://github.com/jana-alhasan/entertainment-WebApp" target="_blank" rel="noopener noreferrer">Source</a>
+          <a href="https://jana-alhasan.github.io/entertainment-WebApp/" target="_blank" rel="noopener noreferrer">Live</a>
         </div>
       </div>
-      <p>A movie and TV browsing app backed by the TMDB API, with Firebase
-        authentication, bookmarking, and a dark-mode theme managed through
-        React Context. Debounced search and custom hooks throughout.</p>
+      <p>
+        My primary public React project: movie and TV discovery with the TMDB REST
+        API, debounced search, pagination, detail pages, trailers, local bookmarks,
+        theme persistence, reusable hooks, and Firebase email/password authentication
+        with email verification.
+      </p>
       <ul class="tag-list tag-list--small">
-        <li>react</li><li>firebase</li><li>context-api</li><li>tmdb-api</li>
+        <li>react</li><li>firebase-auth</li><li>context-api</li><li>tmdb-api</li><li>custom-hooks</li>
+      </ul>
+    </article>
+
+    <article class="project">
+      <div class="project-head">
+        <h3>E-Commerce Frontend</h3>
+        <div class="project-links">
+          <a href="https://github.com/jana-alhasan/e-commerce" target="_blank" rel="noopener noreferrer">Source</a>
+          <a href="https://jana-alhasan.github.io/e-commerce/" target="_blank" rel="noopener noreferrer">Live</a>
+        </div>
+      </div>
+      <p>
+        A frontend commerce demo using public product and authentication APIs.
+        It demonstrates catalog filtering and pagination, product details, Redux
+        Toolkit state, demo login, a locally persisted cart, and a checkout form
+        validated with React Hook Form and Yup. No real order or payment is created.
+      </p>
+      <ul class="tag-list tag-list--small">
+        <li>react</li><li>redux-toolkit</li><li>mui</li><li>react-hook-form</li><li>yup</li>
       </ul>
     </article>
 
@@ -90,97 +113,55 @@
       <div class="project-head">
         <h3>BookStore</h3>
         <div class="project-links">
-          <a href="https://github.com/jana-alhasan/BookStore" target="_blank" rel="noopener">Source</a>
+          <a href="https://github.com/jana-alhasan/BookStore" target="_blank" rel="noopener noreferrer">Source</a>
         </div>
       </div>
-      <p>A book discovery app on top of the Google Books API. Debounced search,
-        paginated results, and a favorites list persisted to local storage
-        through a custom hook.</p>
+      <p>
+        A React book-exploration project using public book data, with debounced
+        URL-driven search, dynamic detail routes, reusable favorites logic,
+        localStorage persistence, responsive MUI components, and explicit loading,
+        empty, and error states.
+      </p>
       <ul class="tag-list tag-list--small">
-        <li>react</li><li>react-router</li><li>google-books-api</li>
+        <li>react</li><li>react-router</li><li>mui</li><li>rest-api</li><li>localstorage</li>
       </ul>
     </article>
-
-    <article class="project">
-      <div class="project-head">
-        <h3>E-commerce Platform</h3>
-        <div class="project-links">
-          <a href="https://github.com/jana-alhasan/e-commerce" target="_blank" rel="noopener">Source</a>
-        </div>
-      </div>
-      <p>A shopping flow — browsing, cart, checkout — with global state handled
-        by Redux Toolkit and forms validated with React Hook Form and Yup.
-        API calls live in their own service layer, separate from state.</p>
-      <ul class="tag-list tag-list--small">
-        <li>react</li><li>redux-toolkit</li><li>mui</li><li>react-hook-form</li>
-      </ul>
-    </article>
-
-    <article class="project">
-      <div class="project-head">
-        <h3>Salon Booking App</h3>
-        <div class="project-links">
-          <a href="https://github.com/jana-alhasan/salon-native" target="_blank" rel="noopener">Source</a>
-        </div>
-      </div>
-      <p>A React Native app for browsing salons, with paginated infinite
-        scroll and a debounced search screen pulling from a live API.</p>
-      <ul class="tag-list tag-list--small">
-        <li>react-native</li><li>react-navigation</li><li>axios</li>
-      </ul>
-    </article>
-
-    <article class="project">
-      <div class="project-head">
-        <h3>Bubble Sort, visualized</h3>
-        <div class="project-links">
-          <a href="https://github.com/jana-alhasan/BubbleSort" target="_blank" rel="noopener">Source</a>
-          <a href="https://janahasa.github.io/BubbleSort/" target="_blank" rel="noopener">Live</a>
-        </div>
-      </div>
-      <p>A step-by-step visualization of the bubble sort algorithm, built
-        without a framework — plain JavaScript driving the DOM directly.</p>
-      <ul class="tag-list tag-list--small">
-        <li>javascript</li><li>dom</li><li>algorithms</li>
-      </ul>
-    </article>
-
   </section>
 
   <section id="experience" class="section">
-    <h2 class="section-head"><span class="section-no">02</span> Experience</h2>
+    <h2 class="section-head"><span class="section-no">02</span> Relevant experience</h2>
 
     <ul class="timeline">
       <li>
         <time>Nov 2023 – Feb 2024</time>
         <div>
-          <h3>Frontend Developer (React.js)</h3>
-          <p>Beauty Salon Company, Ramallah — built and maintained responsive
-            UI components, working directly from design requirements.</p>
+          <h3>Junior Frontend Developer</h3>
+          <p>
+            Beauty Salon Company — contributed within a frontend team to a private,
+            live salon-owner product. Implemented assigned responsive Arabic RTL
+            interfaces from Figma using React and MUI. The production source is private,
+            so the public projects above provide the inspectable code evidence.
+          </p>
         </div>
       </li>
       <li>
-        <time>Jul 2023 – Oct 2023</time>
+        <time>2023</time>
         <div>
-          <h3>Technical Support Specialist</h3>
-          <p>Paltel — diagnosed router and connectivity issues under pressure;
-            where the troubleshooting habit came from.</p>
-        </div>
-      </li>
-      <li>
-        <time>Jan 2023 – Jun 2023</time>
-        <div>
-          <h3>Frontend Developer Trainee</h3>
-          <p>Gaza Sky Geeks — 300 hours of React training, in partnership
-            with Mercy Corps.</p>
+          <h3>Frontend Development with React Training</h3>
+          <p>
+            Gaza Sky Geeks / Mercy Corps — completed a 300-hour frontend program
+            focused on React development.
+          </p>
         </div>
       </li>
       <li>
         <time>Jul 2022 – Sep 2022</time>
         <div>
-          <h3>Frontend Developer Intern (React.js)</h3>
-          <p>Al-Isra Company for Programming &amp; Computers — first hands-on
-            React work, alongside university.</p>
+          <h3>Frontend Developer Intern</h3>
+          <p>
+            Isra Software &amp; Computer Co. — hands-on HTML, CSS, JavaScript, and
+            basic React work alongside professional developers.
+          </p>
         </div>
       </li>
     </ul>
@@ -189,16 +170,12 @@
   <section id="research" class="section">
     <h2 class="section-head"><span class="section-no">03</span> Research</h2>
     <figure class="citation">
-      <blockquote>
-        Automating Arabic Tags Creation for Annotating Web Contents
-      </blockquote>
+      <blockquote>Automating Arabic Tags Creation for Annotating Web Contents</blockquote>
       <figcaption>
-        Published at 3ICT 2022 — International Conference on Innovation and
-        Intelligence for Informatics, Computing, and Technologies, Sakheer,
-        Bahrain. A system for suggesting Arabic tags for web annotations
-        based on part-of-speech analysis.
+        IEEE-published research from 2022 on suggesting Arabic tags for web
+        annotations.
         <br>
-        <a href="https://doi.org/10.1109/3ICT56508.2022.9990699" target="_blank" rel="noopener">doi.org/10.1109/3ICT56508.2022.9990699</a>
+        <a href="https://doi.org/10.1109/3ICT56508.2022.9990699" target="_blank" rel="noopener noreferrer">View the IEEE paper</a>
       </figcaption>
     </figure>
   </section>
@@ -209,11 +186,10 @@
       <strong>B.Sc. Computer Science</strong> — An-Najah National University, 2022
     </p>
   </section>
-
 </main>
 
 <footer id="contact" class="site-foot">
-  <p>Open to remote frontend roles in Europe and the Gulf.</p>
+  <p>Open to Junior / Entry-Level Frontend Developer and Frontend Engineer opportunities, including remote roles globally.</p>
   <p><a href="mailto:jannahasan@hotmail.com">jannahasan@hotmail.com</a></p>
 </footer>
 
