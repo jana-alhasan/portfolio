@@ -1,0 +1,85 @@
+name: Portfolio CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate local links and page metadata
+        run: |
+          python - <<'PY'
+          from html.parser import HTMLParser
+          from pathlib import Path
+          from urllib.parse import urlparse
+
+          class PortfolioParser(HTMLParser):
+              def __init__(self):
+                  super().__init__()
+                  self.ids = set()
+                  self.hrefs = []
+                  self.sources = []
+                  self.title = []
+                  self.in_title = False
+
+              def handle_starttag(self, tag, attrs):
+                  attrs = dict(attrs)
+                  if "id" in attrs:
+                      self.ids.add(attrs["id"])
+                  if tag == "a" and attrs.get("href"):
+                      self.hrefs.append(attrs["href"])
+                  if tag in {"img", "link", "script"}:
+                      source = attrs.get("src") or attrs.get("href")
+                      if source:
+                          self.sources.append(source)
+                  if tag == "title":
+                      self.in_title = True
+
+              def handle_endtag(self, tag):
+                  if tag == "title":
+                      self.in_title = False
+
+              def handle_data(self, data):
+                  if self.in_title:
+                      self.title.append(data)
+
+          root = Path(".")
+          html = Path("index.html").read_text(encoding="utf-8")
+          parser = PortfolioParser()
+          parser.feed(html)
+
+          assert "Junior Frontend Developer" in "".join(parser.title), "Portfolio title is not role-focused"
+          assert "janahasa.github.io" not in html, "Stale GitHub Pages username remains"
+          assert "Jana_Alhasan_CV.pdf" not in html, "Broken local CV link remains"
+
+          for href in parser.hrefs:
+              if href.startswith("#"):
+                  target = href[1:]
+                  assert target in parser.ids, f"Missing anchor target: {href}"
+                  continue
+              parsed = urlparse(href)
+              if parsed.scheme in {"http", "https", "mailto"}:
+                  continue
+              path = href.split("#", 1)[0].split("?", 1)[0]
+              if path:
+                  assert (root / path).exists(), f"Missing local link target: {href}"
+
+          for source in parser.sources:
+              parsed = urlparse(source)
+              if parsed.scheme in {"http", "https", "data"}:
+                  continue
+              path = source.split("?", 1)[0]
+              if path:
+                  assert (root / path).exists(), f"Missing local asset: {source}"
+
+          print("PORTFOLIO INTEGRITY CHECK PASSED")
+          PY
