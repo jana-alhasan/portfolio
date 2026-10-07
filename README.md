@@ -1,36 +1,31 @@
-# Jana Alhasan — Portfolio
+# Jana Alhasan — Frontend Portfolio
 
-My personal portfolio site — a single-page site covering my work, experience,
-published research, and education, built as a standalone site rather than
-relying only on GitHub itself.
+A small, dependency-free portfolio site that presents my strongest public frontend evidence, relevant experience, education, and IEEE-published research.
 
-🔗 **Live:** [janahasa.github.io/portfolio](https://janahasa.github.io/portfolio/)
+**Live:** https://jana-alhasan.github.io/portfolio/
 
-## Sections
+## What the portfolio highlights
 
-- **Work** — selected projects (React, React Native, Redux Toolkit, Firebase)
-- **Experience** — a timeline of my frontend roles and training
-- **Research** — my published IEEE paper on Arabic web annotation tagging
-- **Education** — B.Sc. Computer Science, An-Najah National University
+- **Entertainment WebApp** — flagship React project with TMDB REST API integration, Firebase Authentication, debounced search, pagination, bookmarks, theme persistence, and reusable hooks.
+- **E-Commerce Frontend** — React/Redux Toolkit/MUI demo with public product and demo-auth APIs, filtering/pagination, product details, a locally persisted cart, and validated checkout form UI.
+- **BookStore** — React/React Router/MUI book-exploration project with URL-driven debounced search, dynamic details, favorites, localStorage persistence, and explicit loading/error/empty states.
+- **Professional frontend experience** — private salon-owner product contribution, described without exposing proprietary source or overstating ownership.
+- **Research** — IEEE paper, *Automating Arabic Tags Creation for Annotating Web Contents*.
 
-## Built With
+## Built with
 
-- HTML5
-- CSS3 (no framework — custom design system, responsive from mobile up)
-- Google Fonts (Inter, IBM Plex Mono)
-- Hosted on GitHub Pages
+- Semantic HTML5
+- Custom responsive CSS3
+- Google Fonts (Inter and IBM Plex Mono)
+- No JavaScript framework or build dependency is required for the portfolio site itself
 
-## Design
+## Evidence boundaries
 
-The layout borrows its visual language from my IEEE paper on tagging web
-annotations — skills and project stacks are shown as literal tags, and the
-research section is styled like a citation. One accent color is used
-sparingly, echoing a highlighter mark on a document.
+The portfolio links to public repositories for code-visible claims. The salon product source is private, so the site describes only the verified role and implementation scope. The E-Commerce project is explicitly a frontend demo and does not claim real payments, fulfillment, inventory, or backend order creation.
 
-## Running Locally
+## Run locally
 
-Clone the repo and open `index.html` directly in a browser — no build step
-or dependencies required.
+Clone the repository and open `index.html` in a browser. No install or build step is required.
 
 ```bash
 git clone https://github.com/jana-alhasan/portfolio
@@ -40,6 +35,4 @@ open index.html
 
 ## Contact
 
-[jannahasan@hotmail.com](mailto:jannahasan@hotmail.com) ·
-[LinkedIn](https://www.linkedin.com/in/jana-hasan/) ·
-[GitHub](https://github.com/jana-alhasan)
+[jannahasan@hotmail.com](mailto:jannahasan@hotmail.com) · [LinkedIn](https://www.linkedin.com/in/jana-hasan/) · [GitHub](https://github.com/jana-alhasan)
